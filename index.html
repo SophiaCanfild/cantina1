@@ -1,56 +1,93 @@
+<!-- Estrutura completa com HTML + links externos para CSS e JS -->
+<!-- Você terá três arquivos: index.html, style.css e script.js -->
+<!-- Abaixo está o index.html pronto no estilo do modelo enviado -->
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>SchoolLunch Express</title>
-<link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cantina Escolar Digital</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<header class="header">
-<h1>SchoolLunch Express</h1>
-<nav>
-<a href="#catalogo">Catálogo</a>
-<a href="#pedido">Pedido</a>
-</nav>
-</header>
+  <header>
+    <div class="logo">Cantina Digital</div>
+    <nav>
+      <a href="#home">Início</a>
+      <a href="#produtos">Lanches</a>
+      <a href="#refeicoes">Refeições</a>
+      <a href="#sobre">Sobre</a>
+    </nav>
+  </header>
 
+  <section class="hero-section" id="home">
+    <div class="hero-text">
+      <h1>Lanches Frescos, Rápidos e Deliciosos</h1>
+      <p>A forma mais moderna e prática de pedir lanches na sua escola. Faça seu pedido, receba o código de retirada e evite filas!</p>
+      <button class="btn-primary">Fazer Pedido</button>
+    </div>
+    <div class="hero-img"></div>
+  </section>
 
-<section class="hero">
-<h2>Peça seu lanche sem filas!</h2>
-<p>Rápido, prático e feito para sua escola.</p>
-<button id="btnExplorar">Explorar</button>
-</section>
+  <section class="section" id="produtos">
+    <h2>Lanches Mais Pedidos</h2>
+    <div class="cards-container">
 
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1608198093002-ad4e005484b7?q=80" />
+        <h3>Pão de Queijo</h3>
+        <p>Quentinho e crocante por fora.</p>
+        <button class="btn-card">Adicionar ao Pedido</button>
+      </div>
 
-<section id="catalogo" class="catalogo">
-<h2>Catálogo de Produtos</h2>
-<div class="produtos">
-<div class="card">
-<img src="https://via.placeholder.com/150" />
-<h3>Pão de Queijo</h3>
-<p>R$ 4,00</p>
-<button class="addCarrinho">Adicionar</button>
-</div>
-<div class="card">
-<img src="https://via.placeholder.com/150" />
-<h3>Suco Natural</h3>
-<p>R$ 5,00</p>
-<button class="addCarrinho">Adicionar</button>
-</div>
-</div>
-</section>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1509365465985-25d11c17e812?q=80" />
+        <h3>Enroladinho de Salsicha</h3>
+        <p>Clássico da cantina.</p>
+        <button class="btn-card">Adicionar ao Pedido</button>
+      </div>
 
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1619099896827-4c5b176acae8?q=80" />
+        <h3>Coxinha</h3>
+        <p>Frango temperado e massa macia.</p>
+        <button class="btn-card">Adicionar ao Pedido</button>
+      </div>
 
-<section id="pedido" class="pedido">
-<h2>Seu Pedido</h2>
-<ul id="listaPedido"></ul>
-<button id="gerarCodigo">Gerar Código de Retirada</button>
-<p id="codigoRetirada"></p>
-</section>
+    </div>
+  </section>
 
+  <section class="section" id="refeicoes">
+    <h2>Refeições</h2>
+    <div class="cards-container">
 
-<script src="script.js"></script>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1610901341327-98d5933170f5?q=80" />
+        <h3>Marmita Fit</h3>
+        <p>Arroz, frango e salada.</p>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1562967914-608f82629710?q=80" />
+        <h3>Macarronada</h3>
+        <p>Molho caseiro delicioso.</p>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1586201375761-83865001e31b?q=80" />
+        <h3>Prato do Dia</h3>
+        <p>Acompanha suco.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    © 2025 Cantina Digital — Sistema de Pedidos Escolar
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
-```
+
