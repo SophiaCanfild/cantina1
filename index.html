@@ -1,1 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SchoolLunch Express</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="header">
+<h1>SchoolLunch Express</h1>
+<nav>
+<a href="#catalogo">Catálogo</a>
+<a href="#pedido">Pedido</a>
+</nav>
+</header>
 
+
+<section class="hero">
+<h2>Peça seu lanche sem filas!</h2>
+<p>Rápido, prático e feito para sua escola.</p>
+<button id="btnExplorar">Explorar</button>
+</section>
+
+
+<section id="catalogo" class="catalogo">
+<h2>Catálogo de Produtos</h2>
+<div class="produtos">
+<div class="card">
+<img src="https://via.placeholder.com/150" />
+<h3>Pão de Queijo</h3>
+<p>R$ 4,00</p>
+<button class="addCarrinho">Adicionar</button>
+</div>
+<div class="card">
+<img src="https://via.placeholder.com/150" />
+<h3>Suco Natural</h3>
+<p>R$ 5,00</p>
+<button class="addCarrinho">Adicionar</button>
+</div>
+</div>
+</section>
+
+
+<section id="pedido" class="pedido">
+<h2>Seu Pedido</h2>
+<ul id="listaPedido"></ul>
+<button id="gerarCodigo">Gerar Código de Retirada</button>
+<p id="codigoRetirada"></p>
+</section>
+
+
+<script src="script.js"></script>
+</body>
+</html>
+```

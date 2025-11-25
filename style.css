@@ -1,1 +1,62 @@
+```css
+li.textContent = item;
+listaPedido.appendChild(li);
+});
+});
 
+
+// Gerar código de retirada
+const gerarCodigo = document.getElementById("gerarCodigo");
+const codigoRetirada = document.getElementById("codigoRetirada");
+
+
+gerarCodigo.addEventListener("click", () => {
+const codigo = Math.floor(Math.random() * 90000 + 10000);
+codigoRetirada.textContent = `Seu código de retirada: ${codigo}`;
+codigoRetirada.style.fontWeight = "bold";
+});
+```
+/* === DESIGN MODERNO ADICIONADO === */
+body {
+margin: 0;
+padding: 0;
+font-family: "Inter", sans-serif;
+background: #f5f7fa;
+color: #333;
+}
+header {
+background: #ffffff;
+padding: 20px 40px;
+box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+position: sticky;
+top: 0;
+z-index: 10;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.hero-section {
+width: 100%;
+height: 70vh;
+background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=2070');
+background-size: cover;
+background-position: center;
+display: flex;
+align-items: center;
+justify-content: center;
+color: #fff;
+text-align: center;
+padding: 20px;
+}
+.card {
+background: #fff;
+border-radius: 14px;
+padding: 20px;
+box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+transition: 0.3s ease;
+text-align: center;
+}
+.card:hover {
+transform: translateY(-6px);
+box-shadow: 0 10px 28px rgba(0,0,0,0.10);
+}
