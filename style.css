@@ -176,3 +176,36 @@ nav a:hover {
   margin-top: 60px;
   font-size: 0.9rem;
 }
+/* === FORMULÁRIO DE PEDIDOS === */
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #1a1a1a;
+    padding: 40px;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.pedido-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.pedido-form input,
+.pedido-form select,
+.pedido-form textarea {
+    width: 100%;
+    background: #0f0f0f;
+    border: 1px solid #333;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.pedido-form textarea {
+    height: 120px;
+    resize: none;
+}
