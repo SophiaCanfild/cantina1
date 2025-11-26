@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fazer Pedido - Cantina Digital</title>
+    <title>Fazer Pedido - Quick Dish</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
-    <div class="logo">Cantina Digital</div>
+    <div class="logo">Quick Dish</div>
     <nav>
         <a href="index.html">Início</a>
         <a href="#refeicoes">Refeições</a>
@@ -24,34 +24,34 @@
     <div class="form-container">
         <form class="pedido-form">
 
-            <label>Nome Completo</label>
-            <input type="text" placeholder="Seu nome" required>
+    <label>Nome Completo</label>
+    <input type="text" id="nome" placeholder="Seu nome" required>
 
-            <label>Turma</label>
-            <input type="text" placeholder="Ex: 2ºB, 9ºA..." required>
+    <label>Turma</label>
+    <input type="text" id="turma" placeholder="Ex: 2ºB, 9ºA..." required>
 
-            <label>Forma de Pagamento</label>
-            <select required>
-                <option value="">Selecione</option>
-                <option>Dinheiro</option>
-                <option>Cartão</option>
-                <option>PIX (pagamento na retirada)</option>
-            </select>
+    <label>Forma de Pagamento</label>
+    <select id="pagamento" required>
+        <option value="">Selecione</option>
+        <option>Dinheiro</option>
+        <option>Cartão</option>
+        <option>PIX (paga na retirada)</option>
+    </select>
 
-            <label>Lanche</label>
-<select id="lanche-select" required>
-    <option value="">Selecione seu lanche</option>
-    <option>Coxinha</option>
-    <option>Pão de Queijo</option>
-    <option>Sanduíche Natural</option>
-    <option>Suco Natural</option>
-    <option>Bolo Caseiro</option>
-    <option>Pastel</option>
-</select>
+    <label>Lanche</label>
+    <select id="lanche" required>
+        <option value="">Selecione seu lanche</option>
+        <option>Coxinha</option>
+        <option>Pão de Queijo</option>
+        <option>Sanduíche Natural</option>
+        <option>Suco Natural</option>
+        <option>Bolo Caseiro</option>
+        <option>Pastel</option>
+    </select>
 
+    <button class="btn-primary" type="submit">Enviar Pedido</button>
+</form>
 
-            <button class="btn-primary" type="submit">Enviar Pedido</button>
-        </form>
     </div>
 </section>
 
