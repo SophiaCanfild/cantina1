@@ -3,56 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fazer Pedido</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Fazer Pedido - Quick Dish</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <header>
-    <div class="logo">Cantina Digital</div>
+    <div class="logo">Quick Dish</div>
     <nav>
         <a href="index.html">Início</a>
+        <a href="#refeicoes">Refeições</a>
+        <a href="pedido.html">Pedidos</a>
     </nav>
 </header>
 
 <section class="section">
     <h2>Realizar Pedido</h2>
 
-    <form id="pedidoForm" class="pedido-form">
+    <div class="form-container">
+        <form class="pedido-form">
 
-        <label>Nome:</label>
-        <input type="text" id="nome" required>
+            <label>Nome Completo</label>
+            <input type="text" placeholder="Seu nome" required>
 
-        <label>Turma:</label>
-        <input type="text" id="turma" required>
+            <label>Turma</label>
+            <input type="text" placeholder="Ex: 2ºB, 9ºA..." required>
 
-        <label>Forma de Pagamento:</label>
-        <select id="pagamento" required>
-            <option value="" disabled selected>Escolher...</option>
-            <option>Dinheiro</option>
-            <option>Cartão</option>
-            <option>Pix</option>
-        </select>
+            <label>Forma de Pagamento</label>
+            <select required>
+                <option value="">Selecione</option>
+                <option>Dinheiro</option>
+                <option>Cartão</option>
+                <option>PIX (pagamento na retirada)</option>
+            </select>
 
-        <label>Pedido:</label>
-        <select id="pedido" required>
-            <option value="" disabled selected>Selecione sua refeição</option>
-            <option>Hambúrguer</option>
-            <option>Salgado Assado</option>
-            <option>Misto Quente</option>
-            <option>Pizza Brotinho</option>
-            <option>Hot Dog</option>
-            <option>Sanduíche Natural</option>
-        </select>
+            <label>Lanche</label>
+<select id="lanche-select" required>
+    <option value="">Selecione seu lanche</option>
+    <option>Coxinha</option>
+    <option>Pão de Queijo</option>
+    <option>Sanduíche Natural</option>
+    <option>Suco Natural</option>
+    <option>Bolo Caseiro</option>
+    <option>Pastel</option>
+</select>
 
-        <button type="submit" class="btn-primary">Enviar Pedido</button>
 
-        <p id="mensagem-confirmacao" class="msg-sucesso"></p>
-
-    </form>
-
+            <button class="btn-primary" type="submit">Enviar Pedido</button>
+        </form>
+    </div>
 </section>
 
-<script src="script.js"></script>
 </body>
 </html>
