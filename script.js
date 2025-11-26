@@ -1,46 +1,35 @@
-// Geração de códigos únicos
-let codigosGerados = JSON.parse(localStorage.getItem("codigos")) || [];
+document.addEventListener("DOMContentLoaded", () => {
 
-function gerarCodigo() {
-    let codigo;
-    do {
-        codigo = Math.floor(10000 + Math.random() * 90000); // 5 dígitos
-    } while (codigosGerados.includes(codigo));
+    const form = document.getElementById("pedidoForm");
+    const mensagem = document.getElementById("mensagem-confirmacao");
 
-    codigosGerados.push(codigo);
-    localStorage.setItem("codigos", JSON.stringify(codigosGerados));
+    // Armazenar códigos já usados
+    let codigosUsados = [];
 
-    return codigo;
-}
+    function gerarCodigo() {
+        let codigo;
+        do {
+            codigo = Math.floor(10000 + Math.random() * 90000);
+        } while (codigosUsados.includes(codigo));
 
-// Modal
-const modal = document.getElementById("modal");
+        codigosUsados.push(codigo);
+        return codigo;
+    }
 
-function fecharModal() {
-    modal.style.display = "none";
-}
+    form.addEventListener("submit", function(e) {
+        e.preventDefault();
 
-// Formulário
-document.getElementById("pedidoForm")?.addEventListener("submit", function(e) {
-    e.preventDefault();
+        const nome = document.getElementById("nome").value;
+        const pedido = document.getElementById("pedido").value;
 
-    const nome = document.getElementById("nome").value;
-    const turma = document.getElementById("turma").value;
-    const refeicao = document.getElementById("refeicao").value;
-    const pagamento = document.getElementById("pagamento").value;
+        const codigo = gerarCodigo();
 
-    const codigo = gerarCodigo();
-    document.getElementById("codigoPedido").textContent =
-        `Código do seu pedido: ${codigo}`;
+        mensagem.innerHTML = `
+            Pedido realizado com sucesso!<br>
+            <strong>Código:</strong> ${codigo}
+        `;
+        mensagem.style.opacity = "1";
 
-    // Criar QR Code
-    const qrArea = document.getElementById("qrcode");
-    qrArea.innerHTML = "";
-    new QRCode(qrArea, {
-        text: `Pedido: ${codigo}\nNome: ${nome}\nTurma: ${turma}\nRefeição: ${refeicao}`,
-        width: 150,
-        height: 150
+        form.reset();
     });
-
-    modal.style.display = "flex"; 
 });

@@ -3,61 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Realizar Pedido</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Fazer Pedido</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="pedido-body">
+<body>
 
-<header class="topo-pedido">
-    <h1>Faça seu Pedido</h1>
-    <p class="sub">Preencha as informações abaixo</p>
+<header>
+    <div class="logo">Cantina Digital</div>
+    <nav>
+        <a href="index.html">Início</a>
+    </nav>
 </header>
 
-<section class="pedido-container">
-    <form id="pedidoForm">
+<section class="section">
+    <h2>Realizar Pedido</h2>
+
+    <form id="pedidoForm" class="pedido-form">
+
         <label>Nome:</label>
         <input type="text" id="nome" required>
 
         <label>Turma:</label>
         <input type="text" id="turma" required>
 
-        <label>Refeição:</label>
-        <select id="refeicao" required>
-            <option value="" disabled selected>Selecione uma opção</option>
-            <option value="Marmita Simples">Marmita Simples</option>
-            <option value="Marmita Média">Marmita Média</option>
-            <option value="Marmita Grande">Marmita Grande</option>
-            <option value="Macarrão">Macarrão</option>
-            <option value="Feijoada">Feijoada</option>
-            <option value="Lasanha">Lasanha</option>
-        </select>
-
         <label>Forma de Pagamento:</label>
         <select id="pagamento" required>
-            <option value="" disabled selected>Selecione</option>
+            <option value="" disabled selected>Escolher...</option>
             <option>Dinheiro</option>
             <option>Cartão</option>
             <option>Pix</option>
         </select>
 
-        <button type="submit" class="btn-enviar">Enviar Pedido</button>
+        <label>Pedido:</label>
+        <select id="pedido" required>
+            <option value="" disabled selected>Selecione sua refeição</option>
+            <option>Hambúrguer</option>
+            <option>Salgado Assado</option>
+            <option>Misto Quente</option>
+            <option>Pizza Brotinho</option>
+            <option>Hot Dog</option>
+            <option>Sanduíche Natural</option>
+        </select>
+
+        <button type="submit" class="btn-primary">Enviar Pedido</button>
+
+        <p id="mensagem-confirmacao" class="msg-sucesso"></p>
+
     </form>
+
 </section>
 
-<!-- MODAL -->
-<div id="modal" class="modal">
-    <div class="modal-content modal-anim">
-        <h2>Pedido Realizado!</h2>
-        <p id="codigoPedido"></p>
-        <p>Use o QR Code abaixo para confirmar seu pedido:</p>
-        <div id="qrcode"></div>
-
-        <button class="modal-btn" onclick="fecharModal()">Fechar</button>
-    </div>
-</div>
-
 <script src="script.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
-
 </body>
 </html>
